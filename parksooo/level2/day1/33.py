@@ -7,13 +7,13 @@ class Solution:
             mid = (s + e) // 2
             if nums[mid] == target:
                 return mid
-            if nums[s] <= nums[mid]:
-                if target < nums[s] or target > nums[mid]:
+            if nums[s] <= nums[mid]: # 시작 값과 미드값을 비교한다 시작이 미드값보다 작으면
+                if target < nums[s] or target > nums[mid]: # 미드 < 타겟 < 시작 값이면 s를 옮긴다
                     s = mid + 1
-                else:
+                else: # 아니면 엔드를 옮겨
                     e = mid - 1
             else:
-                if target < nums[mid] or nums[e] < target:
+                if target < nums[mid] or nums[e] < target: # 미드 < 타겟, 엔드 < 타겟 이면 e값을 옮긴다
                     e = mid - 1
                 else:
                     s = mid + 1
