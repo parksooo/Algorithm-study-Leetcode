@@ -13,19 +13,19 @@ class Solution2:
 		m = len(matrix)
 		n = len(matrix[0])
 		s = 0
-		e = (m * n) - 1
-		while s <= e:
-			mid = s + (e - s) // 2
-			r = mid // n
-			l = mid % n
-			if matrix[r][l] == target:
+		e = (m * n) - 1 # 끝 인덱스 
+		while s <= e: # 이진탐색 시작!!
+			mid = s + (e - s) // 2 
+			r = mid // n #row 인덱스 구하기
+			c = mid % n #col 인덱스 구하기
+			if matrix[r][c] == target:
 				return True
-			elif matrix[r][l] > target:
+			elif matrix[r][c] > target:
 				e = mid - 1
 			else : 
 				s = mid + 1
 		return False
-
+# 이진 탐색입니다
 test = Solution()
 test2 = Solution2()
 print(test2.searchMatrix([[1,3,5,7],[10,11,16,20],[23,30,34,60]], 13))

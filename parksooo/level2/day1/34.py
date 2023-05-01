@@ -15,10 +15,10 @@ class Solution:
                     e = mid - 1
             return -1
     
-        pos = search_pos(nums, target)
-        if pos == -1:
+        pos = search_pos(nums, target) # 이진 탐색으로 타겟 위치 찾기
+        if pos == -1: # 없으면 리턴
             return [-1, -1]
-        s = e = pos
+        s = e = pos # 스타트 엔드 값을 pos로 정하고 while문을 두번 돌려서 타겟의 시작과 끝을 찾는다
         while e < len(nums) - 1 and nums[e] == target:
             if nums[e + 1] == target:
                 e += 1
