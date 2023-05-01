@@ -31,11 +31,7 @@ class Solution:
                 break
             i += 1
         return [s, e]
-            
 
-
-
-	
 test = Solution()
 print(test.searchRange([5,7,7,8,8,10], 8))
 print(test.searchRange([1], 1))
