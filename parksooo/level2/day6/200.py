@@ -20,7 +20,7 @@ class Solution:
                         for x, y in direct:
                             nrow, ncol = row + x, col + y
                             if 0 <= nrow < n and 0 <= ncol < m and grid[nrow][ncol] == '1' and visited[nrow][ncol] == 0:
-                                visited[nrow][ncol]=1
+                                visited[nrow][ncol] = 1
                                 dq.append((nrow, ncol))
         return cnt
 
