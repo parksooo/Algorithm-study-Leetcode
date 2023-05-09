@@ -6,7 +6,6 @@ class Solution:
         n = len(grid)
         if grid[0][0] == 1 or grid[n - 1][n - 1] == 1:
             return -1
-        visited = [[0 for i in range(n)] for j in range(n)]
         direct1 = [(-1, 0), (-1, -1), (-1, 1), (1, 0), (1, -1), (1, 1), (0, -1), (0, 1)]
 
         dq = deque()
