@@ -18,4 +18,4 @@ class Solution:
         dfs([], 0, 0)
         return res
 test = Solution()
-print(test.generateParenthesis(3))
+print(test.generateParenthesis(2))
